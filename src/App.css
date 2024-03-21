@@ -1,38 +1,277 @@
-/* Add a black background color to the top navigation */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  background-color: #F5F5F5;
+  /* Lighter shade for a softer look */
+  color: #333;
+  /* Darker text for better readability */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 12px;
+  color: #444;
+}
+
 .topnav {
-  background-color: #985353;
+  background-color: #4A4E69; /* More modern color */
   overflow: hidden;
+  padding: 0 2vw; /* Use viewport width for padding */
+  display: flex; /* Use flex to align link and logo */
+  align-items: center; /* Align items vertically */
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  display: flex;
-
-  justify-content: center; 
-  justify-content: space-around;
-  float: left;
-  color: #20d544;
-  text-align: center;
-  padding: 13.5px 50px;
+  color: #F2E9E4; /* Soft off-white */
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
+  display: block; /* Ensure the anchor tag is properly formatted */
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #0914ee;
+.topnav a:hover, .topnav a.active {
+  background-color: #9A8C98; /* Subtle hover and active state */
   color: white;
 }
 
-.logo {
+.logo img {
+  max-height: 50px; /* Limit the height of the logo */
+  width: auto; /* Keep the aspect ratio of the logo */
+  margin-left: 20px; /* Add some space between the logo and the link */
+}
+
+
+/* Sidebar Styles */
+.Sidebar {
+  background-color: #22223B;
+  /* Dark background for contrast */
+  color: #CACACA;
+  /* Light text */
+  padding: 20px;
+  width: 250px;
+  /* Fixed width for consistency */
+}
+
+/* Task Cards */
+.task-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 100%;
+  /* Adaptive width */
+  max-width: 250px;
+  /* Maximum width */
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Improving Layout Consistency */
+.app-container,
+.containers {
   display: flex;
-  width: 50px;
-  height: 50px;
+  flex-wrap: wrap;
+  /* Ensure wrapping on smaller screens */
+  gap: 20px;
+  /* Consistent spacing */
+}
+
+/* Responsive Images */
+.containers img {
+  height: auto;
+  max-width: 100%;
+  /* Ensure images are responsive */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #4A4E69;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Skills List */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  background-color: #9A8C98;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* About Section */
+.about {
+  padding: 20px;
+  background-color: #F2E9E4;
+  color: #22223B;
+  border-radius: 8px;
+}
+
+/* Ensure Consistent Margin and Padding */
+.card,
+.task-card,
+.about,
+.Sidebar,
+.footer,
+.topnav {
+  margin-bottom: 20px;
+}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+.card {
+  width: 450px;
+  margin: 40px;
+  border: 4px solid #222;
+}
+
+.card::after {
+  content: "";
+  display: block;
+}
+
+.avatar img {
+  width: 100%;
+  display: block;
+}
+
+
+
+.data {
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-align: center;
 
 }
+
+.data p {
+
+  text-align: center;
+  word-break: break-all;
+}
+
+.center {
+
+
+
+  border: 3px solid green;
+
+}
+
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill {
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+
+}
+
+.about-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  min-height: 100vh; /* At least full viewport height */
+  flex-direction: column; /* Stack children vertically */
+  text-align: center; /* Ensures text within the container is centered, may be redundant with flex but useful for nested text */
+}
+
+.card {
+  margin: auto; /* Additionally ensures the card is centered in the container */
+  width: 450px; /* Your specified width */
+  border: 4px solid #222; /* Your specified border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Your specified shadow */
+}
+
+/* Ensure the rest of your styles are included as they are necessary for the overall look */
+/* Assuming the image is directly within a div with class 'home-container' */
+.home-container {
+  height: 100vh; /* Viewport Height: Makes the container take up the remaining screen height */
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  overflow: hidden; /* Prevents any overflow from the container */
+}
+
+.home-container img {
+  max-height: 100%; /* Limits the image height to the container's height */
+  max-width: 100%; /* Ensures the image does not exceed the container's width */
+  object-fit: cover; /* Covers the area without stretching the image */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.image-container {
+  position: relative; /* Allows absolute positioning inside */
+  height: calc(100vh - 50px); /* Adjust 50px to your footer's height */
+  width: 100vw;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container without losing aspect ratio */
+}
+
+
+
+.tasks-container {
+  display: flex;  /* Enables flexbox */
+  justify-content: space-between; /* Spreads out the columns evenly */
+  align-items: flex-start; /* Aligns items to the top of the container */
+  gap: 20px; /* Optional: adds space between the columns */
+}
+
+.task-column {
+  flex: 1; /* Each column takes equal width */
+  /* You may want to set a max-width to prevent the columns from getting too wide on larger screens */
+  max-width: 33%; /* Optional: max-width for larger screens */
+}
+
+/* This is just a sample structure based on your image */
